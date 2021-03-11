@@ -1,30 +1,30 @@
 $(document).ready(function () {
-  // slider()
+  slider()
 })
 
 var arrowLeft = $(".fa-angle-left");
 var arrowRight = $(".fa-angle-right");
 // var clickedElement = $(this);
 
-// function slider() {
-//   arrowLeft.click(function () {
-//     var activeImage = $(".active");
-//     activeImage.removeClass("active").prev().addClass('active');
-//     if (activeImage.hasClass("first") && arrowRight.click(function (){})) {
-//       $(".first").removeClass("active");
-//       $(".last").addClass("active");
-//     }
-//   })
-//
-//   arrowRight.click(function () {
-//     var activeImage = $(".active");
-//     activeImage.removeClass("active").next().addClass('active');
-//     if (activeImage.hasClass("last") && arrowRight.click(function (){})) {
-//       $(".last").removeClass("active");
-//       $(".first").addClass("active");
-//     }
-//   })
-// }
+function slider() {
+  arrowLeft.click(function () {
+    var activeImage = $(".active");
+    activeImage.removeClass("active").prev().addClass('active');
+    if (activeImage.hasClass("first") && arrowRight.click(function (){})) {
+      $(".first").removeClass("active");
+      $(".last").addClass("active");
+    }
+  })
+
+  arrowRight.click(function () {
+    var activeImage = $(".active");
+    activeImage.removeClass("active").next().addClass('active');
+    if (activeImage.hasClass("last") && arrowRight.click(function (){})) {
+      $(".last").removeClass("active");
+      $(".first").addClass("active");
+    }
+  })
+}
 
 
 
