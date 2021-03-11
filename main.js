@@ -4,14 +4,30 @@ $(document).ready(function () {
 
 var arrowLeft = $(".fa-angle-left");
 var arrowRight = $(".fa-angle-right");
-var clickedElement = $(this);
+// var clickedElement = $(this);
 
-
-arrowLeft.click(function () {
-  console.log("ahahah");
-   //es variabile.show() (per i menu a tendina)
+ arrowLeft.click(function () {
+   var activeImage = $(".active");
+   activeImage.removeClass("active").prev().addClass('active');
+   if (activeImage.hasClass("first") && arrowRight.click(function (){})) {
+     $(".first").removeClass("active");
+     $(".last").addClass("active");
+   }
  })
 
+ arrowRight.click(function () {
+   var activeImage = $(".active");
+   activeImage.removeClass("active").next().addClass('active');
+   if (activeImage.hasClass("last") && arrowRight.click(function (){})) {
+     $(".last").removeClass("active");
+     $(".first").addClass("active");
+   }
+ })
+
+
+
+
+ 
 //  arrowRight.click(function () {
 //    var activeImage = $(".active");
 //    activeImage.removeClass("active");
@@ -27,15 +43,6 @@ arrowLeft.click(function () {
 
 
 
-arrowRight.click(function () {
-  var activeImage = $(".active");
-  activeImage.removeClass("active").next().addClass('active');
-  if (activeImage.hasClass("last") && arrowRight.click(function (){})) {
-    $(".last").removeClass("active");
-    $(".first").addClass("active");
-  }
-   //es variabile.show() (per i menu a tendina)
-})
 
 
 
